@@ -1,0 +1,30 @@
+<ul class="nav nav-tabs">
+    <li role="presentation"><a href="#!/">Home</a></li>
+    <li role="presentation" class="active"><a href="#!/categories">Categories</a></li>
+</ul>
+
+<div class="well">
+    <h3 class="panel-title">Dish categories</h3>
+</div>
+
+<div class="container">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <br>
+                <div class="col-sm-3"><b>(Category ID)</b></div>
+                <div class="col-sm-9">Category name</div>
+                <br>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row" ng-repeat="cat in catCtrl.categs"
+                ui-sref="items({catId: cat.short_name})" style="cursor: pointer;">
+                <br>
+                <div class="col-sm-3"><b>({{cat.short_name}})</b></div>
+                <div class="col-sm-9">{{cat.name}}</div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
